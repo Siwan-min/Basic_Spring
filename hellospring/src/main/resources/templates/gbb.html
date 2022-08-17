@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=chrome">
+    <meta name="viewport" content="width-device-width, initial-scale">
+    <title>가위 바위 보</title>
+</head>
+<body>
+<table border="1">
+    <thead>
+    <!-- 필드 제목 넣을 때 사용, 하나의 row 생성할 때 -->
+    <thead>
+    <th>my</th>
+    <th>com</th>
+    <th>result</th>
+    </thead>
+    <!-- 내용 넣을 때 사용  -->
+    <tbody>
+    <tr>
+        <td><img th:src="${my}" width="100" height="40"></td>
+        <td><img th:src="${com}" width="100" height="40"></td>
+        <td><img th:src="${result}" width="100" height="40"></td>
+    </tr>
+    </tbody>
+    </thead>
+</table>
+</body>
+</html>
