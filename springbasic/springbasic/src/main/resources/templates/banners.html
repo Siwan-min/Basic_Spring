@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<span><a><img src=""></a> </span> <!--banner1-->
+<span> </span> <!--banner2-->
+<span> </span> <!--banner3-->
+
+<span th:each="banner : ${banners}">
+  <a th:href="${banner.href}">
+    <img th:src="@{/img/} + ${banner.imgSrc}" width="100" height="40"/>
+  </a>
+
+</span>
+
+</body>
+</html>

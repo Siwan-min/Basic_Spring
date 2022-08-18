@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Fragment</title>
+</head>
+<body>
+ <th:block th:replace="~{header::header}"/>
+
+우영우~~~~<br>
+<img src="movie.jpg" width="50">
+
+
+<!-- <th:block th: replace="~{footer :: footerFragment}"/>-->
+ <p th: replace="~{footer :: footerFragment}"/></p>
+<!--<div th:insert="~{footer :: footerFragment2}"/></div>-->
+
+</body>
+</html>

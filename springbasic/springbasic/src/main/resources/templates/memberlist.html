@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
+    <title>Title</title>
+</head>
+<body>
+
+<!--
+<span th:each="banner : ${banners}">
+  <a th:href="${banner.href}">
+    <img th:src="@{/img/} + ${banner.imgSrc}" width="100" height="40"/>
+  </a>
+
+</span>
+-->
+<table border="1">
+  <caption>Member List</caption>
+  <thead>
+  <tr>
+    <th>이름</th> <th>나이</th> <th>성별</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="member : ${members}">
+    <td th:text="${member.name}"></td>
+    <td th:text="${member.age}"></td>
+    <td th:if="${member.gender}">
+      <img src="/img/naver.jpg" width="30" height="30">
+    </td>
+    <td th:unless="${member.gender}">
+      <img src="/img/google.jpg" width="30" height="30">
+    </td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>
