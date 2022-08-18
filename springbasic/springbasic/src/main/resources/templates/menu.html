@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .current {
+        color: red;
+        }
+    </style>
+</head>
+<body>
+
+<div th:fragment="menu">
+
+    <div>
+        <a href="/page"> [HOME] </a>
+        <a th:each="m: ${menus}" th:text="${m.name}" th:href="${m.url}"
+            th:class="${current == m.name ? 'red' : '' }"/>
+    </div>
+
+</div>
+
+</body>
+</html>

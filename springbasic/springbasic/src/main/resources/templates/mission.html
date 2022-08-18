@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>성별 출력하기</h3>
+<th:block th:each="gender: ${genders}">
+    <img th:src="|img/${gender ? 'male.jpg' : 'female.jpg'}| " width="20"/>
+</th:block></br>
+
+<hr>
+<h3>좌석 체크</h3>
+<th:block th:each="seat, s : ${seats}">
+
+    <br th:if="${s.index > 0 and s.index % 5 == 0}">
+    [[${s.index + 1}]]: <th:block th:text="${seat ? '[X]' : '[ ]'}"/>
+    <!-- <th:block th:text="${s.index == 4 ? '<br>' : ''}"/>-->
+
+
+</th:block>
+
+
+
+</body>
+</html>
