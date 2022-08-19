@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>가위 바위 보</title>
+</head>
+<body>
+
+<h1>가위 바위 보 게임</h1>
+<table th:if="${my}" border="1">
+    <tr> <td>my</td> <td>com</td> <td>result</td></tr>
+    <tr>
+        <td><img th:src="${my}" width="100" height="40"></td>
+        <td><img th:src="${com}" width="100" height="40"></td>
+        <td><img th:src="${result}" width="100" height="40"></td>
+    </tr>
+</table>
+
+<a href="/gbb?my=0">[가위]</a>
+<a href="/gbb?my=1">[바위]</a>
+<a href="/gbb?my=2">[보]</a>
+
+</body>
+</html>

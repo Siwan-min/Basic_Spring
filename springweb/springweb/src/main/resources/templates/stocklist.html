@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!-- stocks -->
+
+<table>
+    <thead>
+        <th>회사명</th><th>가격</th>
+    </thead>
+    <tbody>
+        <tr th:each="stock: ${stocks}">
+            <td><a>[[ ${stock.name} ]] </a></td>
+            <td> <a th:href="@{https://finance.naver.com/item/main.naver(code=${stock.comName})}" target="_blank"></a></td>
+            <!--<td>${stock.price}</td>-->
+
+            <td><a></a></td>
+            <td><a th:href="@{/stockdelete(comcode= ${stock.comCode})}">삭제</a></td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
