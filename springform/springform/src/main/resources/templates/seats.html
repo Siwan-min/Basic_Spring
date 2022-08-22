@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<!--
+
+<form action="/seat" method="get" th:value="${seats}">
+
+  <input type="checkbox" id="seat1" name="seats" value="1">
+  <label for="seat1"> 1</label><br>
+  <input type="checkbox" id="seat2" name="seats" value="2">
+  <label for="seat2"> 2</label><br>
+  <input type="checkbox" id="seat3" name="seats" value="3">
+  <label for="seat3"> 3</label><br>
+  <input type="checkbox" id="seat4" name="seats" value="4">
+  <label for="seat4"> 4</label><br>
+  <input type="checkbox" id="seat5" name="seats" value="5">
+  <label for="seat5"> 5</label><br>
+  <input type="checkbox" id="seat6" name="seats" value="6">
+  <label for="seat6"> 6</label><br>
+  <input type="checkbox" id="seat7" name="seats" value="7">
+  <label for="seat7"> 7</label><br>
+  <input type="checkbox" id="seat8" name="seats" value="8">
+  <label for="seat8"> 8</label><br>
+  <input type="checkbox" id="seat9" name="seats" value="9">
+  <label for="seat9"> 9</label><br>
+  <input type="checkbox" id="seat10" name="seats" value="10">
+  <label for="seat10"> 10</label><br>
+
+  <button type="submit">제출</button>
+  [[${seats}]]
+</form>
+-->
+<form action="/seats">
+  <th:block th:each="seat, s : ${seats}">
+    <input type="checkbox" th:name="|ans${s.index+1}|" th:checked="${seat}">
+    [[${s.index + 1}]] <br>
+  </th:block>
+
+  <button type="submit" >제출</button>
+  [[${seat}]]
+</form>
+
+</body>
+</html>

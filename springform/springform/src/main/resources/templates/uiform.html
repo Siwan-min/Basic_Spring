@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+  <h2>Title</h2>
+  <input type="text" name="title" id="title" th:value="${title}"><br>
+
+  <h3>Exercise</h3>
+  <input type="radio" id="football" name="exercise" value="football" th:checked="${exercise.equals('football')}">
+  <label for="football" >축구</label><br>
+  <input type="radio" id="basketball" name="exercise" value="basketball" th:checked="${exercise.equals('basketball')}">
+  <label for="basketball" >농구</label><br>
+  <input type="radio" id="baseball" name="exercise" value="baseball" th:checked="${exercise.equals('baseball')}">
+  <label for="baseball" >야구</label><br>
+
+  <h3>Vehicles</h3>
+  <input type="checkbox" id="vehicle4" name="vehicles" value="Bike" th:checked="${vehicles.contains('Bike')}">
+  <label for="vehicle4"> I have a bike</label><br>
+  <input type="checkbox" id="vehicle5" name="vehicles" value="Car"  th:checked="${vehicles.contains('Car')}">
+  <label for="vehicle5"> I have a Car</label><br>
+  <input type="checkbox" id="vehicle6" name="vehicles" value="Boat"  th:checked="${vehicles.contains('Boat')}">
+  <label for="vehicle6"> I have a Boat</label><br>
+
+</body>
+</html>
