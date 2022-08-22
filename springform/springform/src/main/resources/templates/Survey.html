@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="/commit">
+
+</form>
+<div th:each=" survey, s : ${surveys}">
+  <h2> 질문[[${state.index+1}]]:[[${survey.title}]]</h2>
+  <div th:switch="${survey.type}">
+    <span th:case="0">
+      <input type="radio" th:name="|ans${s.index+1}|" value="1">매우 불만족
+      <input type="radio" th:name="|ans${s.index+1}|" value="2">불만족
+      <input type="radio" th:name="|ans${s.index+1}|" value="3">대체로 만족
+      <input type="radio" th:name="|ans${s.index+1}|" value="4">만족
+      <input type="radio" th:name="|ans${s.index+1}|" value="5">매우 만족
+      <!-- radio button-->
+    </span>
+    <span th:case="1">
+      <!--text-->
+      <input type="text" th:name="|ans${s.index+1}">
+    </span>
+  </div>
+</div>
+<button type="submit" >제출</button>
+</body>
+</html>
